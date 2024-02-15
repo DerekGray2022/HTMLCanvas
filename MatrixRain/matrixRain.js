@@ -12,6 +12,7 @@ let gradient = ctx.createRadialGradient(
     canvas.height / 2,
     canvas.width * 0.55
 );
+
 gradient.addColorStop(0 / 7, 'red');
 gradient.addColorStop(2 / 7, 'orange');
 gradient.addColorStop(3 / 7, 'yellow');
@@ -19,6 +20,15 @@ gradient.addColorStop(4 / 7, 'green');
 gradient.addColorStop(5 / 7, 'blue');
 gradient.addColorStop(6 / 7, 'indigo');
 gradient.addColorStop(7 / 7, 'violet');
+// gradient.addColorStop(7 / 7, 'rgba(0, 0, 175, 0)');
+
+// gradient.addColorStop(0 / 7, 'rgba(64, 64, 64, 1');
+// gradient.addColorStop(2 / 7, 'rgba(128, 128, 128, 1');
+// gradient.addColorStop(3 / 7, 'rgba(192, 192, 192, 1');
+// gradient.addColorStop(4 / 7, 'rgba(255, 255, 255, 1');
+// gradient.addColorStop(5 / 7, 'rgba(0, 0, 175, 0)');
+// gradient.addColorStop(6 / 7, 'rgba(0, 0, 175, 0)');
+// gradient.addColorStop(7 / 7, 'rgba(0, 0, 175, 0)');
 
 class Symbol{
     constructor(x, y, fontSize, canvasHeight) {
@@ -31,7 +41,7 @@ class Symbol{
     };
 
     draw(context) {
-        //      Create Random Gaps in Character Stream
+        //      Broken Character Stream
         if (Math.random() < 0.9) {
             this.text = this.characters.charAt(Math.floor(Math.random() * this.characters.length));
         }
@@ -65,7 +75,7 @@ class Effect {
     #initialize() {
         for (let x = 0; x < this.columns; x++) {
             this.symbols[x] = new Symbol(x, 0, this.fontSize, this.canvasHeight);
-        }
+        };
     };
 
     resize(width, height) {
@@ -83,12 +93,13 @@ const fps = 18;
 const nextFrame = 1000 / fps;
 let timer = 0;
 
+//      ANIMATION
 const animate = (timeStamp) => {
     const deltaTime = timeStamp - lastTime;
     lastTime = timeStamp;
     if (timer > nextFrame) {
         //      Fading Rectangle
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.03)';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.025)';
         ctx.textAlign = 'center';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -121,13 +132,28 @@ window.addEventListener('resize', () => {
         canvas.height / 2,
         canvas.width * 0.55,
     );
-    gradient.addColorStop(1 / 7, 'red');
+    gradient.addColorStop(0 / 7, 'red');
     gradient.addColorStop(2 / 7, 'orange');
     gradient.addColorStop(3 / 7, 'yellow');
     gradient.addColorStop(4 / 7, 'green');
     gradient.addColorStop(5 / 7, 'blue');
     gradient.addColorStop(6 / 7, 'indigo');
     gradient.addColorStop(7 / 7, 'violet');
+
+    // gradient.addColorStop(0 / 7, 'rgba(64, 64, 64, 1');
+    // gradient.addColorStop(2 / 7, 'rgba(128, 128, 128, 1');
+    // gradient.addColorStop(3 / 7, 'rgba(192, 192, 192, 1');
+    // gradient.addColorStop(4 / 7, 'rgba(255, 255, 255, 1');
+    // gradient.addColorStop(5 / 7, 'rgba(0, 0, 175, 0)');
+    // gradient.addColorStop(6 / 7, 'rgba(0, 0, 175, 0)');
+    // gradient.addColorStop(7 / 7, 'rgba(0, 0, 175, 0)');
 });
+
+
+
+/*
+ アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ */
+
 
 
