@@ -1,0 +1,46 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+#canvas1
+{
+    position: absolute;
+    /* background-color: black; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#back
+{
+    position: absolute;
+    padding: 2rem;
+}
+
+a
+{
+    font-size: 4rem;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover
+{
+    font-size: 4.5rem;
+    color: red;
+}
+
+#patternImage
+{
+    display: none;
+    position: absolute;
+    width: 100vw;
+}
+
+
+
