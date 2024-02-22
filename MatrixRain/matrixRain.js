@@ -13,21 +13,21 @@ let gradient = ctx.createRadialGradient(
     canvas.width * 0.55
 );
 
-gradient.addColorStop(0 / 7, 'red');
-gradient.addColorStop(2 / 7, 'orange');
-gradient.addColorStop(3 / 7, 'yellow');
-gradient.addColorStop(4 / 7, 'green');
-gradient.addColorStop(5 / 7, 'blue');
-gradient.addColorStop(6 / 7, 'indigo');
-gradient.addColorStop(7 / 7, 'violet');
-// gradient.addColorStop(7 / 7, 'rgba(0, 0, 175, 0)');
+gradient.addColorStop(0 / 6, 'red');
+gradient.addColorStop(1 / 6, 'orange');
+gradient.addColorStop(2 / 6, 'yellow');
+gradient.addColorStop(3 / 6, 'green');
+gradient.addColorStop(4 / 6, 'blue');
+gradient.addColorStop(5 / 6, 'indigo');
+// gradient.addColorStop(6 / 6, 'violet');
+gradient.addColorStop(7 / 7, 'rgba(0, 0, 175, 0)');
 
-// gradient.addColorStop(0 / 7, 'rgba(64, 64, 64, 1');
-// gradient.addColorStop(2 / 7, 'rgba(128, 128, 128, 1');
-// gradient.addColorStop(3 / 7, 'rgba(192, 192, 192, 1');
-// gradient.addColorStop(4 / 7, 'rgba(255, 255, 255, 1');
-// gradient.addColorStop(5 / 7, 'rgba(0, 0, 175, 0)');
-// gradient.addColorStop(6 / 7, 'rgba(0, 0, 175, 0)');
+// gradient.addColorStop(0 / 7, 'rgba(0, 0, 0, 1');
+// gradient.addColorStop(1 / 7, 'rgba(128, 128, 128, 1');
+// gradient.addColorStop(2 / 7, 'rgba(192, 192, 0, 1');
+// gradient.addColorStop(3 / 7, 'rgba(67, 67, 214, 1');
+// gradient.addColorStop(5 / 7, 'rgba(43, 43, 178, 1)');
+// gradient.addColorStop(6 / 7, 'rgba(22, 22, 128, 1)');
 // gradient.addColorStop(7 / 7, 'rgba(0, 0, 175, 0)');
 
 class Symbol{
